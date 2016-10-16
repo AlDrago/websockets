@@ -58,7 +58,7 @@ def build_request(set_header):
     """
     rand = bytes(random.getrandbits(8) for _ in range(16))
     key = base64.b64encode(rand).decode()
-    set_header('Upgrade', 'WebSocket')
+    set_header('Upgrade', 'websocket')
     set_header('Connection', 'Upgrade')
     set_header('Sec-WebSocket-Key', key)
     set_header('Sec-WebSocket-Version', '13')
